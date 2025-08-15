@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KHAIRCHEESEMATCH — Cheesecakes & Matcha Goodies</title>
+  <meta name="description" content="KHAIRCHEESEMATCH — Cheesecake & matcha desserts. Order online, pickup in-store.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#hero" aria-label="KHAIRCHEESEMATCH Home">
+      <img src="assets/img/logo.svg" alt="Logo KHAIRCHEESEMATCH" height="40" />
+      <span>KHAIRCHEESEMATCH</span>
+    </a>
+    <nav class="nav">
+      <a href="#best-sellers">Produk Terlaris</a>
+      <a href="#menu">Menu</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#kritik-saran">Kritik & Saran</a>
+      <a href="#lokasi">Lokasi</a>
+    </nav>
+    <button class="cart-button" id="cartButton" aria-label="Buka keranjang belanja">
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 3.999A2 2 0 0 0 17 18zM5.2 5h15.2l-1.7 8.3a2 2 0 0 1-2 1.7H9a2 2 0 0 1-2-1.6L5 3H2" fill="currentColor" />
+      </svg>
+      <span id="cartCount" class="badge">0</span>
+    </button>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="hero-inner">
+      <h1>Cheesecake yang Lumer. <span class="grad">Matcha yang Segar.</span></h1>
+      <p>Camilan manis dengan bahan pilihan. Dapatkan rasa terbaik untuk hari kamu.</p>
+      <a href="#menu" class="btn primary">Lihat Menu</a>
+      <a href="#best-sellers" class="btn ghost">Produk Terlaris</a>
+    </div>
+    <img class="hero-graphic" src="assets/img/hero-platters.svg" alt="Aneka Cheesecake & Matcha" />
+  </section>
+
+  <section id="best-sellers" class="section">
+    <div class="section-head">
+      <h2>Produk Terlaris</h2>
+      <p>Top picks pelanggan kami (maksimal 5 item)</p>
+    </div>
+    <div class="slider" data-auto="true" data-interval="3500">
+      <button class="slider-nav prev" aria-label="Sebelumnya">&#10094;</button>
+      <div class="slider-track" id="bestSellerTrack">
+        <!-- Slides injected by JS -->
+      </div>
+      <button class="slider-nav next" aria-label="Berikutnya">&#10095;</button>
+      <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Navigasi slider"></div>
+    </div>
+  </section>
+
+  <section id="menu" class="section">
+    <div class="section-head">
+      <h2>Menu</h2>
+      <p>Pilih kesukaanmu. Klik “Tambah” untuk masuk ke keranjang.</p>
+    </div>
+    <div id="menuGrid" class="grid"><!-- Cards injected by JS --></div>
+  </section>
+
+  <section id="testimoni" class="section alt">
+    <div class="section-head">
+      <h2>Testimoni Pelanggan</h2>
+      <p>Suara asli dari pelanggan setia kami.</p>
+    </div>
+    <div id="testimonialList" class="testimonials"><!-- Testimonials injected by JS --></div>
+
+    <div class="card mt">
+      <h3>Kirim Testimoni Kamu</h3>
+      <form id="testimonialForm" class="form">
+        <div class="form-row">
+          <label for="tName">Nama</label>
+          <input id="tName" name="name" required placeholder="Nama kamu" />
+        </div>
+        <div class="form-row">
+          <label for="tMsg">Pesan</label>
+          <textarea id="tMsg" name="message" required placeholder="Tulis pengalamanmu di sini..." rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn primary">Kirim</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="kritik-saran" class="section">
+    <div class="section-head">
+      <h2>Kritik & Saran</h2>
+      <p>Bantu kami menjadi lebih baik. Masukanmu sangat berarti.</p>
+    </div>
+    <div class="card">
+      <form id="feedbackForm" class="form">
+        <div class="form-row">
+          <label for="fName">Nama (opsional)</label>
+          <input id="fName" name="name" placeholder="Nama kamu" />
+        </div>
+        <div class="form-row">
+          <label for="fMsg">Kritik/Saran</label>
+          <textarea id="fMsg" name="message" required placeholder="Tulis kritik atau saran..." rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn primary">Kirim Masukan</button>
+        <p class="form-note">* Data disimpan di perangkatmu (localStorage) sehingga aman dan privat.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="lokasi" class="section alt">
+    <div class="section-head">
+      <h2>Lokasi Toko</h2>
+      <p>Silakan kunjungi kami di alamat berikut:</p>
+    </div>
+    <div class="address card">
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2C8.7 2 6 4.7 6 8c0 5 6 12 6 12s6-7 6-12c0-3.3-2.7-6-6-6zm0 8.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" fill="currentColor"/>
+      </svg>
+      <div>
+        <strong>KHAIRCHEESEMATCH</strong><br/>
+        JL.Mercedes Benz No.01
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div>&copy; <span id="year"></span> KHAIRCHEESEMATCH</div>
+    <div class="mini-links">
+      <a href="#hero">Kembali ke atas</a>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside id="cartDrawer" class="drawer" aria-hidden="true" aria-labelledby="cartTitle" role="dialog">
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <h3 id="cartTitle">Keranjang Belanja</h3>
+        <button class="icon-btn" id="closeCart" aria-label="Tutup keranjang">&times;</button>
+      </div>
+      <div id="cartItems" class="cart-items"><!-- Items injected --></div>
+      <div class="drawer-foot">
+        <div class="cart-total">Total: <strong id="cartTotal">Rp0</strong></div>
+        <button id="checkoutBtn" class="btn primary">Checkout</button>
+      </div>
+    </div>
+    <div class="drawer-backdrop" id="drawerBackdrop" tabindex="-1" aria-hidden="true"></div>
+  </aside>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
